@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
+  <info organisation="MPaaSTest" module="app" revision="unspecified" status="integration" publication="20190426153929"/>
+  <configurations>
+    <conf name="androidJacocoAgent" visibility="private"/>
+    <conf name="androidJacocoAnt" visibility="private"/>
+    <conf name="androidTestAnnotationProcessor" visibility="private"/>
+    <conf name="androidTestApi" visibility="private" extends="androidTestCompile"/>
+    <conf name="androidTestApk" visibility="private"/>
+    <conf name="androidTestCompile" visibility="private"/>
+    <conf name="androidTestCompileOnly" visibility="private" extends="androidTestProvided"/>
+    <conf name="androidTestDebugAnnotationProcessor" visibility="private"/>
+    <conf name="androidTestDebugApi" visibility="private" extends="androidTestDebugCompile"/>
+    <conf name="androidTestDebugApk" visibility="private"/>
+    <conf name="androidTestDebugCompile" visibility="private"/>
+    <conf name="androidTestDebugCompileOnly" visibility="private" extends="androidTestDebugProvided"/>
+    <conf name="androidTestDebugImplementation" visibility="private" extends="androidTestDebugApi,debugImplementation"/>
+    <conf name="androidTestDebugProvided" visibility="private"/>
+    <conf name="androidTestDebugRuntimeOnly" visibility="private" extends="androidTestDebugApk,debugRuntimeOnly"/>
+    <conf name="androidTestDebugWearApp" visibility="private"/>
+    <conf name="androidTestImplementation" visibility="private" extends="androidTestApi,implementation"/>
+    <conf name="androidTestProvided" visibility="private"/>
+    <conf name="androidTestRuntimeOnly" visibility="private" extends="androidTestApk,runtimeOnly"/>
+    <conf name="androidTestUtil" visibility="private"/>
+    <conf name="androidTestWearApp" visibility="private"/>
+    <conf name="annotationProcessor" visibility="private"/>
+    <conf name="api" visibility="private" extends="compile"/>
+    <conf name="apk" visibility="private"/>
+    <conf name="archives" visibility="public"/>
+    <conf name="baseResJar" visibility="public"/>
+    <conf name="bundle" visibility="public"/>
+    <conf name="compile" visibility="private"/>
+    <conf name="compileOnly" visibility="private" extends="provided"/>
+    <conf name="debugAndroidTestAnnotationProcessorClasspath" visibility="private" extends="androidTestAnnotationProcessor,androidTestDebugAnnotationProcessor"/>
+    <conf name="debugAndroidTestCompileClasspath" visibility="private" extends="androidTestCompileOnly,androidTestDebugCompileOnly,androidTestDebugImplementation,androidTestImplementation"/>
+    <conf name="debugAndroidTestRuntimeClasspath" visibility="private" extends="androidTestDebugImplementation,androidTestDebugRuntimeOnly,androidTestImplementation,androidTestRuntimeOnly"/>
+    <conf name="debugAnnotationProcessor" visibility="private"/>
+    <conf name="debugAnnotationProcessorClasspath" visibility="private" extends="annotationProcessor,debugAnnotationProcessor"/>
+    <conf name="debugApi" visibility="private" extends="debugCompile"/>
+    <conf name="debugApiElements" visibility="public" extends="api,debugApi"/>
+    <conf name="debugApk" visibility="private"/>
+    <conf name="debugCompile" visibility="private"/>
+    <conf name="debugCompileClasspath" visibility="private" extends="compileOnly,debugCompileOnly,debugImplementation,implementation"/>
+    <conf name="debugCompileOnly" visibility="private" extends="debugProvided"/>
+    <conf name="debugImplementation" visibility="private" extends="debugApi"/>
+    <conf name="debugMetadataElements" visibility="public"/>
+    <conf name="debugProvided" visibility="private"/>
+    <conf name="debugRuntimeClasspath" visibility="private" extends="debugImplementation,debugRuntimeOnly,implementation,runtimeOnly"/>
+    <conf name="debugRuntimeElements" visibility="public"/>
+    <conf name="debugRuntimeOnly" visibility="private" extends="debugApk"/>
+    <conf name="debugUnitTestAnnotationProcessorClasspath" visibility="private" extends="testAnnotationProcessor,testDebugAnnotationProcessor"/>
+    <conf name="debugUnitTestCompileClasspath" visibility="private" extends="testCompileOnly,testDebugCompileOnly,testDebugImplementation,testImplementation"/>
+    <conf name="debugUnitTestRuntimeClasspath" visibility="private" extends="testDebugImplementation,testDebugRuntimeOnly,testImplementation,testRuntimeOnly"/>
+    <conf name="debugWearApp" visibility="private"/>
+    <conf name="debugWearBundling" visibility="public" extends="debugWearApp,wearApp"/>
+    <conf name="default" visibility="public"/>
+    <conf name="devbundle" visibility="public"/>
+    <conf name="devmanifest" visibility="public"/>
+    <conf name="implementation" visibility="private" extends="api"/>
+    <conf name="lintChecks" visibility="private"/>
+    <conf name="manifest" visibility="public"/>
+    <conf name="provided" visibility="private"/>
+    <conf name="releaseAnnotationProcessor" visibility="private"/>
+    <conf name="releaseAnnotationProcessorClasspath" visibility="private" extends="annotationProcessor,releaseAnnotationProcessor"/>
+    <conf name="releaseApi" visibility="private" extends="releaseCompile"/>
+    <conf name="releaseApiElements" visibility="public" extends="api,releaseApi"/>
+    <conf name="releaseApk" visibility="private"/>
+    <conf name="releaseCompile" visibility="private"/>
+    <conf name="releaseCompileClasspath" visibility="private" extends="compileOnly,implementation,releaseCompileOnly,releaseImplementation"/>
+    <conf name="releaseCompileOnly" visibility="private" extends="releaseProvided"/>
+    <conf name="releaseImplementation" visibility="private" extends="releaseApi"/>
+    <conf name="releaseMetadataElements" visibility="public"/>
+    <conf name="releaseProvided" visibility="private"/>
+    <conf name="releaseRuntimeClasspath" visibility="private" extends="implementation,releaseImplementation,releaseRuntimeOnly,runtimeOnly"/>
+    <conf name="releaseRuntimeElements" visibility="public"/>
+    <conf name="releaseRuntimeOnly" visibility="private" extends="releaseApk"/>
+    <conf name="releaseUnitTestAnnotationProcessorClasspath" visibility="private" extends="testAnnotationProcessor,testReleaseAnnotationProcessor"/>
+    <conf name="releaseUnitTestCompileClasspath" visibility="private" extends="testCompileOnly,testImplementation,testReleaseCompileOnly,testReleaseImplementation"/>
+    <conf name="releaseUnitTestRuntimeClasspath" visibility="private" extends="testImplementation,testReleaseImplementation,testReleaseRuntimeOnly,testRuntimeOnly"/>
+    <conf name="releaseWearApp" visibility="private"/>
+    <conf name="releaseWearBundling" visibility="public" extends="releaseWearApp,wearApp"/>
+    <conf name="runtimeOnly" visibility="private" extends="apk"/>
+    <conf name="testAnnotationProcessor" visibility="private"/>
+    <conf name="testApi" visibility="private" extends="testCompile"/>
+    <conf name="testApk" visibility="private"/>
+    <conf name="testCompile" visibility="private"/>
+    <conf name="testCompileOnly" visibility="private" extends="testProvided"/>
+    <conf name="testDebugAnnotationProcessor" visibility="private"/>
+    <conf name="testDebugApi" visibility="private" extends="testDebugCompile"/>
+    <conf name="testDebugApk" visibility="private"/>
+    <conf name="testDebugCompile" visibility="private"/>
+    <conf name="testDebugCompileOnly" visibility="private" extends="testDebugProvided"/>
+    <conf name="testDebugImplementation" visibility="private" extends="debugImplementation,testDebugApi"/>
+    <conf name="testDebugProvided" visibility="private"/>
+    <conf name="testDebugRuntimeOnly" visibility="private" extends="debugRuntimeOnly,testDebugApk"/>
+    <conf name="testDebugWearApp" visibility="private"/>
+    <conf name="testImplementation" visibility="private" extends="implementation,testApi"/>
+    <conf name="testProvided" visibility="private"/>
+    <conf name="testReleaseAnnotationProcessor" visibility="private"/>
+    <conf name="testReleaseApi" visibility="private" extends="testReleaseCompile"/>
+    <conf name="testReleaseApk" visibility="private"/>
+    <conf name="testReleaseCompile" visibility="private"/>
+    <conf name="testReleaseCompileOnly" visibility="private" extends="testReleaseProvided"/>
+    <conf name="testReleaseImplementation" visibility="private" extends="releaseImplementation,testReleaseApi"/>
+    <conf name="testReleaseProvided" visibility="private"/>
+    <conf name="testReleaseRuntimeOnly" visibility="private" extends="releaseRuntimeOnly,testReleaseApk"/>
+    <conf name="testReleaseWearApp" visibility="private"/>
+    <conf name="testRuntimeOnly" visibility="private" extends="runtimeOnly,testApk"/>
+    <conf name="testWearApp" visibility="private"/>
+    <conf name="wearApp" visibility="private"/>
+  </configurations>
+  <publications/>
+  <dependencies>
+    <dependency org="org.jacoco" name="org.jacoco.agent" rev="0.7.4.201502262128" conf="androidJacocoAgent-&gt;default">
+      <artifact name="org.jacoco.agent" type="jar" ext="jar" m:classifier="runtime" conf="androidJacocoAgent"/>
+    </dependency>
+    <dependency org="org.jacoco" name="org.jacoco.ant" rev="0.7.4.201502262128" conf="androidJacocoAnt-&gt;default"/>
+    <dependency org="lopez.example.com.launcher" name="mpaastest-build" rev="1.0-SNAPSHOT" transitive="false" conf="bundle-&gt;default">
+      <artifact name="mpaastest-build" type="jar" ext="jar" m:classifier="raw" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="ui-build" rev="10.1.25.190214120934" transitive="false" conf="bundle-&gt;default">
+      <artifact name="ui-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="logging-build" rev="2.0.2.190318195559" transitive="false" conf="bundle-&gt;default">
+      <artifact name="logging-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="androidsupport-build" rev="13.23.2.190221172354" transitive="false" conf="bundle-&gt;default">
+      <artifact name="androidsupport-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="antui-build" rev="10.1.32.190214141929" transitive="false" conf="bundle-&gt;default">
+      <artifact name="antui-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="nineoldandroids-build" rev="2.4.0.151028164451" transitive="false" conf="bundle-&gt;default">
+      <artifact name="nineoldandroids-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.mpaas.mpaasadapter" name="mpaasadapter-build" rev="1.0.0.190326160009" transitive="false" conf="bundle-&gt;default">
+      <artifact name="mpaasadapter-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="fastjson-build" rev="1.1.70.190213120120" transitive="false" conf="bundle-&gt;default">
+      <artifact name="fastjson-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="androidsupportrecyclerview-build" rev="7.23.2.190212105901" transitive="false" conf="bundle-&gt;default">
+      <artifact name="androidsupportrecyclerview-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.securitycommon" name="aliupgrade-build" rev="1.0.0.190318195559" transitive="false" conf="bundle-&gt;default">
+      <artifact name="aliupgrade-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="quinox-build" rev="2.6.2.190307125153" transitive="false" conf="bundle-&gt;default">
+      <artifact name="quinox-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="lbs-build" rev="1.9.0.190307124849" transitive="false" conf="bundle-&gt;default">
+      <artifact name="lbs-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="autotracker-build" rev="1.0.0.190220221310" transitive="false" conf="bundle-&gt;default">
+      <artifact name="autotracker-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="framework-build" rev="2.6.2.190214155336" transitive="false" conf="bundle-&gt;default">
+      <artifact name="framework-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="utdid-build" rev="2.1.1.190214145225" transitive="false" conf="bundle-&gt;default">
+      <artifact name="utdid-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="common-build" rev="1.8.2.190212210930" transitive="false" conf="bundle-&gt;default">
+      <artifact name="common-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="commonbizservice-build" rev="1.7.0.180823184328" transitive="false" conf="bundle-&gt;default">
+      <artifact name="commonbizservice-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="transport-build" rev="1.8.5.190318200635" transitive="false" conf="bundle-&gt;default">
+      <artifact name="transport-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.sync" name="syncservice-build" rev="2.0.0.190318195559" transitive="false" conf="bundle-&gt;default">
+      <artifact name="syncservice-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="wire-build" rev="1.5.3.190214191738" transitive="false" conf="bundle-&gt;default">
+      <artifact name="wire-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="rpc-build" rev="1.8.5.190214181723" transitive="false" conf="bundle-&gt;default">
+      <artifact name="rpc-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="storage-build" rev="1.7.0.190122163121" transitive="false" conf="bundle-&gt;default">
+      <artifact name="storage-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="commonservice-build" rev="1.9.0.180822012434" transitive="false" conf="bundle-&gt;default">
+      <artifact name="commonservice-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="monitor-build" rev="2.1.4.190212113917" transitive="false" conf="bundle-&gt;default">
+      <artifact name="monitor-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="securityguard-build" rev="5.4.2008.190214160440" transitive="false" conf="bundle-&gt;default">
+      <artifact name="securityguard-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="liteprocess-build" rev="1.0.0.190213105051" transitive="false" conf="bundle-&gt;default">
+      <artifact name="liteprocess-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="forerunner-build" rev="1.0.0.190213131451" transitive="false" conf="bundle-&gt;default">
+      <artifact name="forerunner-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="aspect-build" rev="1.4.1.190122140049" transitive="false" conf="bundle-&gt;default">
+      <artifact name="aspect-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.mobileapi" name="mobileappcommon-build" rev="1.0.0.20180518" transitive="false" conf="bundle-&gt;default">
+      <artifact name="mobileappcommon-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="netsdkextdependapi-build" rev="1.0.1.190214194844" transitive="false" conf="bundle-&gt;default">
+      <artifact name="netsdkextdependapi-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="nebula-build" rev="1.6.2.190202112405" transitive="false" conf="bundle-&gt;default">
+      <artifact name="nebula-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="androidannotations-build" rev="9.6.6.190117113007" transitive="false" conf="bundle-&gt;default">
+      <artifact name="androidannotations-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.mpaas.mpaasadapter" name="commonbiz-build" rev="1.0.0.190213113557" transitive="false" conf="bundle-&gt;default">
+      <artifact name="commonbiz-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="map-build" rev="1.8.0.190212200622" transitive="false" conf="bundle-&gt;default">
+      <artifact name="map-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="adaptermap-build" rev="1.0.0.190212164857" transitive="false" conf="bundle-&gt;default">
+      <artifact name="adaptermap-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="dynamicrelease-build" rev="2.5.7.190318195559" transitive="false" conf="bundle-&gt;default">
+      <artifact name="dynamicrelease-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="amap3dmap-build" rev="3.3.3.190212200602" transitive="false" conf="bundle-&gt;default">
+      <artifact name="amap3dmap-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.mobileapi" name="mobileapp-build" rev="1.0.0.20170307" transitive="false" conf="bundle-&gt;default">
+      <artifact name="mobileapp-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.mpaas.framework.adapter" name="mpaasframeworkadapter-build" rev="1.0.0.190305192450" transitive="false" conf="bundle-&gt;default">
+      <artifact name="mpaasframeworkadapter-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="cloudfix-build" rev="2.4.6.190202150132" transitive="false" conf="bundle-&gt;default">
+      <artifact name="cloudfix-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.mpaas.hotpatch.adapter" name="mpaashotpatchadapter-build" rev="1.0.0.190318123822" transitive="false" conf="bundle-&gt;default">
+      <artifact name="mpaashotpatchadapter-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="tianyanadapter-build" rev="1.0.4.190221174536" transitive="false" conf="bundle-&gt;default">
+      <artifact name="tianyanadapter-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="spmtracker-build" rev="1.0.0.190308114531" transitive="false" conf="bundle-&gt;default">
+      <artifact name="spmtracker-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.mpaas.mas.adapter" name="mpaasmasadapter-build" rev="1.0.0.190306161806" transitive="false" conf="bundle-&gt;default">
+      <artifact name="mpaasmasadapter-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="mapbiz-build" rev="1.8.0.190212200634" transitive="false" conf="bundle-&gt;default">
+      <artifact name="mapbiz-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="multimedia-build" rev="1.19.0.190213143659" transitive="false" conf="bundle-&gt;default">
+      <artifact name="multimedia-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.multimedia.base" name="basic-build" rev="1.19.0.190212205749" transitive="false" conf="bundle-&gt;default">
+      <artifact name="basic-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="multimediabiz-build" rev="1.19.0.190212221409" transitive="false" conf="bundle-&gt;default">
+      <artifact name="multimediabiz-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="nbnet" rev="1.1.6.190214193243" transitive="false" conf="bundle-&gt;default">
+      <artifact name="nbnet" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="falconlooks-build" rev="1.0.0.190213151253" transitive="false" conf="bundle-&gt;default">
+      <artifact name="falconlooks-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="beehive-build" rev="10.1.32.190212222800" transitive="false" conf="bundle-&gt;default">
+      <artifact name="beehive-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="falcon-build" rev="1.0.0.190213151241" transitive="false" conf="bundle-&gt;default">
+      <artifact name="falcon-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="multimediaext-build" rev="1.11.0.190213143714" transitive="false" conf="bundle-&gt;default">
+      <artifact name="multimediaext-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.rome" name="syncmpaasapi-build" rev="1.3.5.160714203203" transitive="false" conf="bundle-&gt;default">
+      <artifact name="syncmpaasapi-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.multimedia" name="xmedia-build" rev="1.0.0.190213143723" transitive="false" conf="bundle-&gt;default">
+      <artifact name="xmedia-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="basicstl-build" rev="1.0.0.190214150143" transitive="false" conf="bundle-&gt;default">
+      <artifact name="basicstl-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="nebulauc-build" rev="1.6.0.190202115038" transitive="false" conf="bundle-&gt;default">
+      <artifact name="nebulauc-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="nebulaucsdk-build" rev="1.0.0.190211154705" transitive="false" conf="bundle-&gt;default">
+      <artifact name="nebulaucsdk-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="nebulaappcenter-build" rev="1.6.2.190211161445" transitive="false" conf="bundle-&gt;default">
+      <artifact name="nebulaappcenter-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="nebulaappproxy-build" rev="1.6.2.190211164419" transitive="false" conf="bundle-&gt;default">
+      <artifact name="nebulaappproxy-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.mpaas.nebula.adapter" name="mpaasnebulaadapter-build" rev="10.1.32.190321150220" transitive="false" conf="bundle-&gt;default">
+      <artifact name="mpaasnebulaadapter-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="scanexport-build" rev="1.0.0.190402132006" transitive="false" conf="bundle-&gt;default">
+      <artifact name="scanexport-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.scancode" name="mascanengine-build" rev="2.0.0.190212154115" transitive="false" conf="bundle-&gt;default">
+      <artifact name="mascanengine-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.scancode" name="bqcscanservice-build" rev="2.0.0.190212154052" transitive="false" conf="bundle-&gt;default">
+      <artifact name="bqcscanservice-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.mpaas.mpush.thirdparty.huawei" name="huawei-build" rev="1.0.0.190214200124" transitive="false" conf="bundle-&gt;default">
+      <artifact name="huawei-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="xiaomipush-build" rev="2.2.21.190215170006" transitive="false" conf="bundle-&gt;default">
+      <artifact name="xiaomipush-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.rome" name="pushsdk-build" rev="1.7.0.190321095259" transitive="false" conf="bundle-&gt;default">
+      <artifact name="pushsdk-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.mpaas.mps.adapter" name="mpaasmpsadapter-build" rev="1.0.0.190321184633" transitive="false" conf="bundle-&gt;default">
+      <artifact name="mpaasmpsadapter-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="crypto-build" rev="1.0.1.190214192446" transitive="false" conf="bundle-&gt;default">
+      <artifact name="crypto-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="transportext-build" rev="1.8.4.190214184717" transitive="false" conf="bundle-&gt;default">
+      <artifact name="transportext-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="netsdkextdepend-build" rev="1.0.2.190214194158" transitive="false" conf="bundle-&gt;default">
+      <artifact name="netsdkextdepend-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.mpaas.mss.adapter" name="mpaasmssadapter-build" rev="1.0.0.190305192450" transitive="false" conf="bundle-&gt;default">
+      <artifact name="mpaasmssadapter-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mpaas" name="tinyappcustom-build" rev="1.0.0.190212173550" transitive="false" conf="bundle-&gt;default">
+      <artifact name="tinyappcustom-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="tinyappcommon-build" rev="1.0.0.190313132106" transitive="false" conf="bundle-&gt;default">
+      <artifact name="tinyappcommon-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="apble-build" rev="1.0.0.190122171648" transitive="false" conf="bundle-&gt;default">
+      <artifact name="apble-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.mpaas.configservice.adapter" name="mpaasconfigserviceadapter-build" rev="1.0.0.190313170150" transitive="false" conf="bundle-&gt;default">
+      <artifact name="mpaasconfigserviceadapter-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="androidsupportpalette-build" rev="7.22" transitive="false" conf="bundle-&gt;default">
+      <artifact name="androidsupportpalette-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="com.mpaas.plus" name="plus-build" rev="10.1.32.190320143204" transitive="false" conf="bundle-&gt;default">
+      <artifact name="plus-build" type="jar" ext="jar" conf="bundle"/>
+    </dependency>
+    <dependency org="lopez.example.com.launcher" name="mpaastest-build" rev="1.0-SNAPSHOT" transitive="false" conf="manifest-&gt;default">
+      <artifact name="mpaastest-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="ui-build" rev="10.1.25.190214120934" transitive="false" conf="manifest-&gt;default">
+      <artifact name="ui-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="logging-build" rev="2.0.2.190318195559" transitive="false" conf="manifest-&gt;default">
+      <artifact name="logging-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="androidsupport-build" rev="13.23.2.190221172354" transitive="false" conf="manifest-&gt;default">
+      <artifact name="androidsupport-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="antui-build" rev="10.1.32.190214141929" transitive="false" conf="manifest-&gt;default">
+      <artifact name="antui-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="nineoldandroids-build" rev="2.4.0.151028164451" transitive="false" conf="manifest-&gt;default">
+      <artifact name="nineoldandroids-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.mpaas.mpaasadapter" name="mpaasadapter-build" rev="1.0.0.190326160009" transitive="false" conf="manifest-&gt;default">
+      <artifact name="mpaasadapter-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="fastjson-build" rev="1.1.70.190213120120" transitive="false" conf="manifest-&gt;default">
+      <artifact name="fastjson-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="androidsupportrecyclerview-build" rev="7.23.2.190212105901" transitive="false" conf="manifest-&gt;default">
+      <artifact name="androidsupportrecyclerview-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.securitycommon" name="aliupgrade-build" rev="1.0.0.190318195559" transitive="false" conf="manifest-&gt;default">
+      <artifact name="aliupgrade-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="quinox-build" rev="2.6.2.190307125153" transitive="false" conf="manifest-&gt;default">
+      <artifact name="quinox-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="lbs-build" rev="1.9.0.190307124849" transitive="false" conf="manifest-&gt;default">
+      <artifact name="lbs-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="autotracker-build" rev="1.0.0.190220221310" transitive="false" conf="manifest-&gt;default">
+      <artifact name="autotracker-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="framework-build" rev="2.6.2.190214155336" transitive="false" conf="manifest-&gt;default">
+      <artifact name="framework-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="utdid-build" rev="2.1.1.190214145225" transitive="false" conf="manifest-&gt;default">
+      <artifact name="utdid-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="common-build" rev="1.8.2.190212210930" transitive="false" conf="manifest-&gt;default">
+      <artifact name="common-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="commonbizservice-build" rev="1.7.0.180823184328" transitive="false" conf="manifest-&gt;default">
+      <artifact name="commonbizservice-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="transport-build" rev="1.8.5.190318200635" transitive="false" conf="manifest-&gt;default">
+      <artifact name="transport-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.sync" name="syncservice-build" rev="2.0.0.190318195559" transitive="false" conf="manifest-&gt;default">
+      <artifact name="syncservice-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="wire-build" rev="1.5.3.190214191738" transitive="false" conf="manifest-&gt;default">
+      <artifact name="wire-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="rpc-build" rev="1.8.5.190214181723" transitive="false" conf="manifest-&gt;default">
+      <artifact name="rpc-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="storage-build" rev="1.7.0.190122163121" transitive="false" conf="manifest-&gt;default">
+      <artifact name="storage-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="commonservice-build" rev="1.9.0.180822012434" transitive="false" conf="manifest-&gt;default">
+      <artifact name="commonservice-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="monitor-build" rev="2.1.4.190212113917" transitive="false" conf="manifest-&gt;default">
+      <artifact name="monitor-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="securityguard-build" rev="5.4.2008.190214160440" transitive="false" conf="manifest-&gt;default">
+      <artifact name="securityguard-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="liteprocess-build" rev="1.0.0.190213105051" transitive="false" conf="manifest-&gt;default">
+      <artifact name="liteprocess-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="forerunner-build" rev="1.0.0.190213131451" transitive="false" conf="manifest-&gt;default">
+      <artifact name="forerunner-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="aspect-build" rev="1.4.1.190122140049" transitive="false" conf="manifest-&gt;default">
+      <artifact name="aspect-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="netsdkextdependapi-build" rev="1.0.1.190214194844" transitive="false" conf="manifest-&gt;default">
+      <artifact name="netsdkextdependapi-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="nebula-build" rev="1.6.2.190202112405" transitive="false" conf="manifest-&gt;default">
+      <artifact name="nebula-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="androidannotations-build" rev="9.6.6.190117113007" transitive="false" conf="manifest-&gt;default">
+      <artifact name="androidannotations-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.mpaas.mpaasadapter" name="commonbiz-build" rev="1.0.0.190213113557" transitive="false" conf="manifest-&gt;default">
+      <artifact name="commonbiz-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="map-build" rev="1.8.0.190212200622" transitive="false" conf="manifest-&gt;default">
+      <artifact name="map-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="adaptermap-build" rev="1.0.0.190212164857" transitive="false" conf="manifest-&gt;default">
+      <artifact name="adaptermap-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="dynamicrelease-build" rev="2.5.7.190318195559" transitive="false" conf="manifest-&gt;default">
+      <artifact name="dynamicrelease-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="amap3dmap-build" rev="3.3.3.190212200602" transitive="false" conf="manifest-&gt;default">
+      <artifact name="amap3dmap-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.mpaas.framework.adapter" name="mpaasframeworkadapter-build" rev="1.0.0.190305192450" transitive="false" conf="manifest-&gt;default">
+      <artifact name="mpaasframeworkadapter-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="cloudfix-build" rev="2.4.6.190202150132" transitive="false" conf="manifest-&gt;default">
+      <artifact name="cloudfix-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.mpaas.hotpatch.adapter" name="mpaashotpatchadapter-build" rev="1.0.0.190318123822" transitive="false" conf="manifest-&gt;default">
+      <artifact name="mpaashotpatchadapter-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="tianyanadapter-build" rev="1.0.4.190221174536" transitive="false" conf="manifest-&gt;default">
+      <artifact name="tianyanadapter-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="spmtracker-build" rev="1.0.0.190308114531" transitive="false" conf="manifest-&gt;default">
+      <artifact name="spmtracker-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.mpaas.mas.adapter" name="mpaasmasadapter-build" rev="1.0.0.190306161806" transitive="false" conf="manifest-&gt;default">
+      <artifact name="mpaasmasadapter-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="mapbiz-build" rev="1.8.0.190212200634" transitive="false" conf="manifest-&gt;default">
+      <artifact name="mapbiz-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="multimedia-build" rev="1.19.0.190213143659" transitive="false" conf="manifest-&gt;default">
+      <artifact name="multimedia-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.multimedia.base" name="basic-build" rev="1.19.0.190212205749" transitive="false" conf="manifest-&gt;default">
+      <artifact name="basic-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="multimediabiz-build" rev="1.19.0.190212221409" transitive="false" conf="manifest-&gt;default">
+      <artifact name="multimediabiz-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="nbnet" rev="1.1.6.190214193243" transitive="false" conf="manifest-&gt;default">
+      <artifact name="nbnet" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="falconlooks-build" rev="1.0.0.190213151253" transitive="false" conf="manifest-&gt;default">
+      <artifact name="falconlooks-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="beehive-build" rev="10.1.32.190212222800" transitive="false" conf="manifest-&gt;default">
+      <artifact name="beehive-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="falcon-build" rev="1.0.0.190213151241" transitive="false" conf="manifest-&gt;default">
+      <artifact name="falcon-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="multimediaext-build" rev="1.11.0.190213143714" transitive="false" conf="manifest-&gt;default">
+      <artifact name="multimediaext-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.rome" name="syncmpaasapi-build" rev="1.3.5.160714203203" transitive="false" conf="manifest-&gt;default">
+      <artifact name="syncmpaasapi-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.multimedia" name="xmedia-build" rev="1.0.0.190213143723" transitive="false" conf="manifest-&gt;default">
+      <artifact name="xmedia-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="basicstl-build" rev="1.0.0.190214150143" transitive="false" conf="manifest-&gt;default">
+      <artifact name="basicstl-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="nebulauc-build" rev="1.6.0.190202115038" transitive="false" conf="manifest-&gt;default">
+      <artifact name="nebulauc-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="nebulaucsdk-build" rev="1.0.0.190211154705" transitive="false" conf="manifest-&gt;default">
+      <artifact name="nebulaucsdk-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="nebulaappcenter-build" rev="1.6.2.190211161445" transitive="false" conf="manifest-&gt;default">
+      <artifact name="nebulaappcenter-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="nebulaappproxy-build" rev="1.6.2.190211164419" transitive="false" conf="manifest-&gt;default">
+      <artifact name="nebulaappproxy-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.mpaas.nebula.adapter" name="mpaasnebulaadapter-build" rev="10.1.32.190321150220" transitive="false" conf="manifest-&gt;default">
+      <artifact name="mpaasnebulaadapter-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.scancode" name="mascanengine-build" rev="2.0.0.190212154115" transitive="false" conf="manifest-&gt;default">
+      <artifact name="mascanengine-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.scancode" name="bqcscanservice-build" rev="2.0.0.190212154052" transitive="false" conf="manifest-&gt;default">
+      <artifact name="bqcscanservice-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.mpaas.mpush.thirdparty.huawei" name="huawei-build" rev="1.0.0.190214200124" transitive="false" conf="manifest-&gt;default">
+      <artifact name="huawei-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="xiaomipush-build" rev="2.2.21.190215170006" transitive="false" conf="manifest-&gt;default">
+      <artifact name="xiaomipush-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.rome" name="pushsdk-build" rev="1.7.0.190321095259" transitive="false" conf="manifest-&gt;default">
+      <artifact name="pushsdk-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.mpaas.mps.adapter" name="mpaasmpsadapter-build" rev="1.0.0.190321184633" transitive="false" conf="manifest-&gt;default">
+      <artifact name="mpaasmpsadapter-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="crypto-build" rev="1.0.1.190214192446" transitive="false" conf="manifest-&gt;default">
+      <artifact name="crypto-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="transportext-build" rev="1.8.4.190214184717" transitive="false" conf="manifest-&gt;default">
+      <artifact name="transportext-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="netsdkextdepend-build" rev="1.0.2.190214194158" transitive="false" conf="manifest-&gt;default">
+      <artifact name="netsdkextdepend-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.mpaas.mss.adapter" name="mpaasmssadapter-build" rev="1.0.0.190305192450" transitive="false" conf="manifest-&gt;default">
+      <artifact name="mpaasmssadapter-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mpaas" name="tinyappcustom-build" rev="1.0.0.190212173550" transitive="false" conf="manifest-&gt;default">
+      <artifact name="tinyappcustom-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="tinyappcommon-build" rev="1.0.0.190313132106" transitive="false" conf="manifest-&gt;default">
+      <artifact name="tinyappcommon-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="apble-build" rev="1.0.0.190122171648" transitive="false" conf="manifest-&gt;default">
+      <artifact name="apble-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.mpaas.configservice.adapter" name="mpaasconfigserviceadapter-build" rev="1.0.0.190313170150" transitive="false" conf="manifest-&gt;default">
+      <artifact name="mpaasconfigserviceadapter-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="androidsupportpalette-build" rev="7.22" transitive="false" conf="manifest-&gt;default">
+      <artifact name="androidsupportpalette-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.mpaas.plus" name="plus-build" rev="10.1.32.190320143204" transitive="false" conf="manifest-&gt;default">
+      <artifact name="plus-build" type="xml" ext="xml" m:classifier="AndroidManifest" conf="manifest"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="framework-build" rev="2.6.2.190214155336" transitive="false" conf="provided-&gt;default">
+      <artifact name="framework-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="nebula-build" rev="1.6.2.190211132651" transitive="false" conf="provided-&gt;default">
+      <artifact name="nebula-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.mpaas.framework.adapter" name="mpaasadapter-build" rev="1.0.0.1812031248" transitive="false" conf="provided-&gt;default">
+      <artifact name="mpaasadapter-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="logging-build" rev="2.0.2.190318195559" transitive="false" conf="provided-&gt;default">
+      <artifact name="logging-build" type="jar" ext="jar" m:classifier="util" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="logging-build" rev="2.0.2.190318195559" transitive="false" conf="provided-&gt;default">
+      <artifact name="logging-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="androidsupport-build" rev="13.23.2.190221172354" transitive="false" conf="provided-&gt;default">
+      <artifact name="androidsupport-build" type="jar" ext="jar" m:classifier="androidsupport-v13" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="androidsupport-build" rev="13.23.2.190221172354" transitive="false" conf="provided-&gt;default">
+      <artifact name="androidsupport-build" type="jar" ext="jar" m:classifier="androidsupport-v4" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="androidsupport-build" rev="13.23.2.190221172354" transitive="false" conf="provided-&gt;default">
+      <artifact name="androidsupport-build" type="jar" ext="jar" m:classifier="androidsupport-annotation" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="antui-build" rev="10.1.32.190214141929" transitive="false" conf="provided-&gt;default">
+      <artifact name="antui-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.mpaas.mpaasadapter" name="mpaasadapter-build" rev="1.0.0.190326160009" transitive="false" conf="provided-&gt;default">
+      <artifact name="mpaasadapter-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="fastjson-build" rev="1.1.70.190213120120" transitive="false" conf="provided-&gt;default">
+      <artifact name="fastjson-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="androidsupportrecyclerview-build" rev="7.23.2.190212105901" transitive="false" conf="provided-&gt;default">
+      <artifact name="androidsupportrecyclerview-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.securitycommon" name="aliupgrade-build" rev="1.0.0.190318195559" transitive="false" conf="provided-&gt;default">
+      <artifact name="aliupgrade-build" type="jar" ext="jar" m:classifier="rpc" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.securitycommon" name="aliupgrade-build" rev="1.0.0.190318195559" transitive="false" conf="provided-&gt;default">
+      <artifact name="aliupgrade-build" type="jar" ext="jar" m:classifier="common" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="quinox-build" rev="2.6.2.190307125153" transitive="false" conf="provided-&gt;default">
+      <artifact name="quinox-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="lbs-build" rev="1.9.0.190307124849" transitive="false" conf="provided-&gt;default">
+      <artifact name="lbs-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="autotracker-build" rev="1.0.0.190220221310" transitive="false" conf="provided-&gt;default">
+      <artifact name="autotracker-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="utdid-build" rev="2.1.1.190214145225" transitive="false" conf="provided-&gt;default">
+      <artifact name="utdid-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="commonbizservice-build" rev="1.7.0.180823184328" transitive="false" conf="provided-&gt;default">
+      <artifact name="commonbizservice-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="transport-build" rev="1.8.5.190318200635" transitive="false" conf="provided-&gt;default">
+      <artifact name="transport-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.sync" name="syncservice-build" rev="2.0.0.190318195559" transitive="false" conf="provided-&gt;default">
+      <artifact name="syncservice-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="wire-build" rev="1.5.3.190214191738" transitive="false" conf="provided-&gt;default">
+      <artifact name="wire-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="rpc-build" rev="1.8.5.190214181723" transitive="false" conf="provided-&gt;default">
+      <artifact name="rpc-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="storage-build" rev="1.7.0.190122163121" transitive="false" conf="provided-&gt;default">
+      <artifact name="storage-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="commonservice-build" rev="1.9.0.180822012434" transitive="false" conf="provided-&gt;default">
+      <artifact name="commonservice-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="commonservice-build" rev="1.9.0.180822012434" transitive="false" conf="provided-&gt;default">
+      <artifact name="commonservice-build" type="jar" ext="jar" m:classifier="loader" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="monitor-build" rev="2.1.4.190212113917" transitive="false" conf="provided-&gt;default">
+      <artifact name="monitor-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="securityguard-build" rev="5.4.2008.190214160440" transitive="false" conf="provided-&gt;default">
+      <artifact name="securityguard-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="liteprocess-build" rev="1.0.0.190213105051" transitive="false" conf="provided-&gt;default">
+      <artifact name="liteprocess-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="forerunner-build" rev="1.0.0.190213131451" transitive="false" conf="provided-&gt;default">
+      <artifact name="forerunner-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="aspect-build" rev="1.4.1.190122140049" transitive="false" conf="provided-&gt;default">
+      <artifact name="aspect-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="netsdkextdependapi-build" rev="1.0.1.190214194844" transitive="false" conf="provided-&gt;default">
+      <artifact name="netsdkextdependapi-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="nebula-build" rev="1.6.2.190202112405" transitive="false" conf="provided-&gt;default">
+      <artifact name="nebula-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="androidannotations-build" rev="9.6.6.190117113007" transitive="false" conf="provided-&gt;default">
+      <artifact name="androidannotations-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.mpaas.mpaasadapter" name="commonbiz-build" rev="1.0.0.190213113557" transitive="false" conf="provided-&gt;default">
+      <artifact name="commonbiz-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="map-build" rev="1.8.0.190212200622" transitive="false" conf="provided-&gt;default">
+      <artifact name="map-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="adaptermap-build" rev="1.0.0.190212164857" transitive="false" conf="provided-&gt;default">
+      <artifact name="adaptermap-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="dynamicrelease-build" rev="2.5.7.190318195559" transitive="false" conf="provided-&gt;default">
+      <artifact name="dynamicrelease-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="amap3dmap-build" rev="3.3.3.190212200602" transitive="false" conf="provided-&gt;default">
+      <artifact name="amap3dmap-build" type="jar" ext="jar" m:classifier="api3d" conf="provided"/>
+    </dependency>
+    <dependency org="com.mpaas.framework.adapter" name="mpaasframeworkadapter-build" rev="1.0.0.190305192450" transitive="false" conf="provided-&gt;default">
+      <artifact name="mpaasframeworkadapter-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.mpaas.hotpatch.adapter" name="mpaashotpatchadapter-build" rev="1.0.0.190318123822" transitive="false" conf="provided-&gt;default">
+      <artifact name="mpaashotpatchadapter-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="spmtracker-build" rev="1.0.0.190308114531" transitive="false" conf="provided-&gt;default">
+      <artifact name="spmtracker-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.mpaas.mas.adapter" name="mpaasmasadapter-build" rev="1.0.0.190306161806" transitive="false" conf="provided-&gt;default">
+      <artifact name="mpaasmasadapter-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="multimedia-build" rev="1.19.0.190213143659" transitive="false" conf="provided-&gt;default">
+      <artifact name="multimedia-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="nbnet" rev="1.1.6.190214193243" transitive="false" conf="provided-&gt;default">
+      <artifact name="nbnet" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="falconlooks-build" rev="1.0.0.190213151253" transitive="false" conf="provided-&gt;default">
+      <artifact name="falconlooks-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="beehive-build" rev="10.1.32.190212222800" transitive="false" conf="provided-&gt;default">
+      <artifact name="beehive-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="falcon-build" rev="1.0.0.190213151241" transitive="false" conf="provided-&gt;default">
+      <artifact name="falcon-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilecommon" name="multimediaext-build" rev="1.11.0.190213143714" transitive="false" conf="provided-&gt;default">
+      <artifact name="multimediaext-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.multimedia" name="xmedia-build" rev="1.0.0.190213143723" transitive="false" conf="provided-&gt;default">
+      <artifact name="xmedia-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="nebulauc-build" rev="1.6.0.190202115038" transitive="false" conf="provided-&gt;default">
+      <artifact name="nebulauc-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="nebulaucsdk-build" rev="1.0.0.190211154705" transitive="false" conf="provided-&gt;default">
+      <artifact name="nebulaucsdk-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="nebulaappproxy-build" rev="1.6.2.190211164419" transitive="false" conf="provided-&gt;default">
+      <artifact name="nebulaappproxy-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.mpaas.nebula.adapter" name="mpaasnebulaadapter-build" rev="10.1.32.190321150220" transitive="false" conf="provided-&gt;default">
+      <artifact name="mpaasnebulaadapter-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.scancode" name="mascanengine-build" rev="2.0.0.190212154115" transitive="false" conf="provided-&gt;default">
+      <artifact name="mascanengine-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.scancode" name="bqcscanservice-build" rev="2.0.0.190212154052" transitive="false" conf="provided-&gt;default">
+      <artifact name="bqcscanservice-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.mpaas.mpush.thirdparty.huawei" name="huawei-build" rev="1.0.0.190214200124" transitive="false" conf="provided-&gt;default">
+      <artifact name="huawei-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.thirdparty" name="xiaomipush-build" rev="2.2.21.190215170006" transitive="false" conf="provided-&gt;default">
+      <artifact name="xiaomipush-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.rome" name="pushsdk-build" rev="1.7.0.190321095259" transitive="false" conf="provided-&gt;default">
+      <artifact name="pushsdk-build" type="jar" ext="jar" m:classifier="longlink" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.rome" name="pushsdk-build" rev="1.7.0.190321095259" transitive="false" conf="provided-&gt;default">
+      <artifact name="pushsdk-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.mpaas.mps.adapter" name="mpaasmpsadapter-build" rev="1.0.0.190321184633" transitive="false" conf="provided-&gt;default">
+      <artifact name="mpaasmpsadapter-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="crypto-build" rev="1.0.1.190214192446" transitive="false" conf="provided-&gt;default">
+      <artifact name="crypto-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="transportext-build" rev="1.8.4.190214184717" transitive="false" conf="provided-&gt;default">
+      <artifact name="transportext-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mobilesdk" name="netsdkextdepend-build" rev="1.0.2.190214194158" transitive="false" conf="provided-&gt;default">
+      <artifact name="netsdkextdepend-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.mpaas.mss.adapter" name="mpaasmssadapter-build" rev="1.0.0.190305192450" transitive="false" conf="provided-&gt;default">
+      <artifact name="mpaasmssadapter-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.mpaas" name="tinyappcustom-build" rev="1.0.0.190212173550" transitive="false" conf="provided-&gt;default">
+      <artifact name="tinyappcustom-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="tinyappcommon-build" rev="1.0.0.190313132106" transitive="false" conf="provided-&gt;default">
+      <artifact name="tinyappcommon-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.alipay.android.phone.wallet" name="apble-build" rev="1.0.0.190122171648" transitive="false" conf="provided-&gt;default">
+      <artifact name="apble-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.mpaas.configservice.adapter" name="mpaasconfigserviceadapter-build" rev="1.0.0.190313170150" transitive="false" conf="provided-&gt;default">
+      <artifact name="mpaasconfigserviceadapter-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+    <dependency org="com.mpaas.plus" name="plus-build" rev="10.1.32.190320143204" transitive="false" conf="provided-&gt;default">
+      <artifact name="plus-build" type="jar" ext="jar" m:classifier="api" conf="provided"/>
+    </dependency>
+  </dependencies>
+</ivy-module>

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Demo/MPaaSTestDemo/MPaaSTest/app/build/intermediates/res/merged/debug/drawable/download_cancel_btn_selector.xml",
+        "source": "/Demo/MPaaSTestDemo/MPaaSTest/app/src/main/res/drawable/download_cancel_btn_selector.xml"
+    },
+    {
+        "merged": "/Demo/MPaaSTestDemo/MPaaSTest/app/build/intermediates/res/merged/debug/drawable/download_progress_horizontal.xml",
+        "source": "/Demo/MPaaSTestDemo/MPaaSTest/app/src/main/res/drawable/download_progress_horizontal.xml"
+    },
+    {
+        "merged": "/Demo/MPaaSTestDemo/MPaaSTest/app/build/intermediates/res/merged/debug/drawable/yw_1222.jpg",
+        "source": "/Demo/MPaaSTestDemo/MPaaSTest/app/src/main/res/drawable/yw_1222.jpg"
+    },
+    {
+        "merged": "/Demo/MPaaSTestDemo/MPaaSTest/app/build/intermediates/res/merged/debug/drawable/download_icon.png",
+        "source": "/Demo/MPaaSTestDemo/MPaaSTest/app/src/main/res/drawable/download_icon.png"
+    }
+]

@@ -1,0 +1,2 @@
+include ':api', ':mpaastest-build'
+project(':mpaastest-build').projectDir = new File('app')

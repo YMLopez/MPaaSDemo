@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Demo/MPaaSTestDemo/MPaaSTest/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/download_cancel_normal.png",
+        "source": "/Demo/MPaaSTestDemo/MPaaSTest/app/src/main/res/drawable-hdpi/download_cancel_normal.png"
+    },
+    {
+        "merged": "/Demo/MPaaSTestDemo/MPaaSTest/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/download_cancel_press.png",
+        "source": "/Demo/MPaaSTestDemo/MPaaSTest/app/src/main/res/drawable-hdpi/download_cancel_press.png"
+    }
+]

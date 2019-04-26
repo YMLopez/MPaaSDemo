@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.alipay.bundle'
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+
+    defaultConfig {
+        applicationId "lopez.example.com.launcher"
+        minSdkVersion 18
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+uploadArchives {
+    repositories {
+        mavenLocal()
+    }
+}
+
+version = "1.0-SNAPSHOT"
+group = "lopez.example.com.launcher"
+
+bundle {
+    exportPackages ''
+    initLevel 11110000
+    packageName 'lopez.example.com.launcher'
+    packageId 36
+}
+
+dependencies {
+    compile project(":api")
+    provided 'com.alipay.android.phone.thirdparty:fastjson-api:1.1.45@jar'
+    // androidsupport
+    provided 'com.alipay.android.phone.thirdparty:androidsupport-api:13.23@jar'
+
+    provided "com.alipay.android.phone.mobilesdk:framework-api:2.1.1@jar"
+
+    provided 'com.alipay.android.phone.mobilesdk:framework-build:2.5.7.180320154023:api@jar'
+    provided 'com.alipay.android.phone.wallet:antui-build:10.1.20.180321211516:api@jar'
+    provided 'com.alipay.android.phone.wallet:scanexport-build:1.0.0.180402112323:api@jar'
+    provided 'com.alipay.android.phone.wallet:nebula-build:1.6.2.180322181148:api@jar'
+    provided 'com.mpaas.nebula.adapter:mpaasnebulaadapter-build:10.1.20.180615141835:api@jar'
+    provided 'com.alipay.android.phone.mobilesdk:logging-build:2.0.2.180322162837:api@jar'
+
+    implementation 'org.greenrobot:greendao-api:3.2.2'
+}
+
+apply plugin: 'com.alipay.apollo.baseline.update'
+mpaascomponents {
+// when you want exclude mpaas dependencies ,you can add dependency ga to to excludeDependencies
+// or set removed = true in mpaaspakcages.json
+    excludeDependencies = []
+}

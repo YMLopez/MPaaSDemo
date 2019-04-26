@@ -1,0 +1,29 @@
+{
+	"config":{
+		"updateReqRate":16400,
+		"limitReqRate":13600,
+		"appPoolLimit":3,
+		"versionRefreshRate":86400
+	},
+	"data":[
+		{
+			"app_desc":"mPaaS产品测试",
+			"app_id":"20001010",
+			"auto_install":1,
+			"fallback_base_url":"https://mcube-prod.oss-cn-hangzhou.aliyuncs.com/2D3F71D261007-FinMallDev/20001010/1.0.0.0_android/nebula/fallback/",
+			"global_pack_url":"",
+			"icon_url":"",
+			"installType":1,
+			"main_url":"/ynet_android/test/index.html",
+			"online":1,
+			"package_url":"https://mcube-prod.oss-cn-hangzhou.aliyuncs.com/2D3F71D261007-FinMallDev/20001010/1.0.0.0_android/nebula/20001010_1.0.0.0.amr",
+			"patch":"",
+			"sub_url":"",
+			"version":"1.0.0.0",
+			"vhost":"https://20001010.ynetapp.com"
+		}
+	],
+	"resultCode":100,
+	"resultMsg":"操作成功",
+	"state":"success"
+}

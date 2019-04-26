@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Demo/MPaaSTestDemo/MPaaSTest/app/build/intermediates/res/merged/debug/layout/init.xml",
+        "source": "/Demo/MPaaSTestDemo/MPaaSTest/app/src/main/res/layout/init.xml"
+    },
+    {
+        "merged": "/Demo/MPaaSTestDemo/MPaaSTest/app/build/intermediates/res/merged/debug/layout/download_progress.xml",
+        "source": "/Demo/MPaaSTestDemo/MPaaSTest/app/src/main/res/layout/download_progress.xml"
+    }
+]
